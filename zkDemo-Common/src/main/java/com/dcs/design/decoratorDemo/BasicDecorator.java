@@ -1,5 +1,9 @@
 package com.dcs.design.decoratorDemo;
 
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+
 //»ù±¾×°ÊÎÆ÷
 public abstract class BasicDecorator implements Component{
 
@@ -15,4 +19,20 @@ public abstract class BasicDecorator implements Component{
             component.operation();
         }
     }
+
+    public static void main(String[] args) {
+        String str = "leetcode";
+        char[] strs = str.toCharArray();
+        Set set = new HashSet();
+        for (char c :strs) {
+            set.add(c);
+        }
+        if (set.size() == strs.length) {
+            System.out.println(true);
+        }else {
+            System.out.println(false);
+        }
+    }
+
+
 }
